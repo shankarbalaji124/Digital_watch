@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+#tim
+{
+ font-size:100px;
+ color:red;
+ text-align:center;
+}
+        
+</style>
+</head> 
+    
+<body>
+<div id="tim"></div>
+
+<script>
+setInterval(display,1000);
+function display()
+{
+ var time = new Date();
+ var a=time.getHours();
+ var b=time.getMinutes();
+ var c=time.getSeconds();
+
+var di='am'
+if(a>12)
+{
+a=a-12
+var di='pm'
+}
+if (b<10)
+{
+b= '0'+b
+}
+if(c<10)
+{
+    c='0'+c
+}
+document.getElementById("tim").innerHTML=(a+":"+b+":"+c+":"+di)
+console.log(a+":"+b+":"+c+":"+di)
+}
+</script>
+</body>
+</html>
